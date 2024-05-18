@@ -1,11 +1,22 @@
 import http from "http";
-import { connectToMongo } from './database.ts';
+import { DatabaseHandler } from './database.ts';
+import * as dotenv from 'dotenv';
+import { Workout } from "./schemas/workout.ts";
+
+dotenv.config();
 const PORT = 3000;
+const database : DatabaseHandler = new DatabaseHandler();
 
-
+const workoutTemplate : Workout = {
+  date: new Date(),
+  rating: 10,
+  exerciseList: ["Clean & Jerk" , "F.Squats"],
+};
 
 const server = http.createServer((req, res) => {
-  connectToMongo();
+  database.connect();
+  database.saveWorkout(workoutTemplate);
+  
   res.statusCode = 200;
   res.setHeader("Content-Type", "text/plain");
   res.end("Hello World\n");
