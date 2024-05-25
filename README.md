@@ -11,7 +11,8 @@ After trying for about a week to track my progress with a pyhsical pen and paper
 Recognizing those problems I have decided to implement a website that I can track my progress anywhere even while working out.
 
 ## Project goals
-Besides having a functional workout tracker for my personal use I would also want to learn web technologies and languages like Typescript React/Svelte and more.
+Besides having a functional workout tracker for my personal use I would also want to learn web technologies and languages like Typescript, React/Svelte and more.
+
 The learning part will be 'Vanilla' useage of the languages at first and after sometime will switch to web frameworks like NextJS/ExpressJS.
 
 # Useage

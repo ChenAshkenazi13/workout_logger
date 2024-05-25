@@ -4,7 +4,7 @@ import * as dotenv from 'dotenv';
 import { Workout } from "./schemas/workout.ts";
 
 dotenv.config();
-const PORT = 3000;
+const PORT = 3001;
 const database : DatabaseHandler = new DatabaseHandler();
 
 const workoutTemplate : Workout = {
